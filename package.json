@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "live-reload": "nodemon server/index.js",
+    "test": "set LOG_DISABLED=true && set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand --no-cache",
+    "test:watch": "set LOG_DISABLED=true && set NODE_OPTIONS=--experimental-vm-modules && npx jest --watchAll --runInBand --no-cache",
+    "test:coverage": "set LOG_DISABLED=true && set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand --coverage tests/unit"
+  },
+  "engines": {
+    "node": "17"
+  },
+  "keywords": [],
+  "author": "nicolasaigner",
+  "license": "ISC",
+  "dependencies": {
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.3"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  }
+}
